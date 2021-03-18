@@ -1,0 +1,6 @@
+input {
+    display: block;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
