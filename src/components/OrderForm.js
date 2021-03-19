@@ -30,6 +30,16 @@ function OrderForm({test}) {
                     <div className="separator"></div>
 
                     <h3>Uw gegevens</h3>
+                    {errors.firstname && errors.firstname.type == "required" && (
+                        <div className="error">
+                            <p>Voornaam is verlpicht!</p>
+                        </div>
+                    )}
+                    {errors.lastname && errors.lastname.type == "required" && (
+                        <div className="error">
+                            <p>Achternaam is verplicht!</p>
+                        </div>
+                    )}
                     <div className="form-names two-columns column">
                         <div className="item">
                             <label htmlFor="firstname">Voornaam</label>
@@ -41,28 +51,9 @@ function OrderForm({test}) {
                         </div>
 
                     </div>
-                    {errors.firstname && errors.firstname.type == "required" && (
-                        <div className="error">
-                            <p>Voornaam is verlpicht!</p>
-                        </div>
-                    )}
-                    {errors.lastname && errors.lastname.type == "required" && (
-                        <div className="error">
-                            <p>Achternaam is verplicht!</p>
-                        </div>
-                    )}
+
 
                     <div className="form-age one-column column">
-                        <div className="item">
-                            <label htmlFor="age">Leeftijd</label>
-                            <input type="number" name="age"
-                                   ref={register({
-                                       required: true, valueAsNumber: true, min: 18, pattern: {
-                                           value: /^-?[0-9]\d*\.?\d*$/i,
-                                           message: ""
-                                       }
-                                   })} type="text"/>
-                        </div>
                         {errors.age && errors.age.type == "required" && (
                             <div className="error">
                                 <p>Leeftijd is verplicht!</p>
@@ -79,6 +70,22 @@ function OrderForm({test}) {
                                 <p>U moet minstens 18 jaar oud zijn!</p>
                             </div>
                         )}
+                        {errors.age && errors.age.type == "maxLength" && (
+                            <div className="error">
+                                <p>Goh... U bent wel heel erg oud...</p>
+                            </div>
+                        )}
+                        <div className="item">
+                            <label htmlFor="age">Leeftijd</label>
+                            <input type="number" name="age"
+                                   ref={register({
+                                       required: true, valueAsNumber: true, min: 18, maxLength: 2, pattern: {
+                                           value: /^-?[0-9]\d*\.?\d*$/i,
+                                           message: ""
+                                       }
+                                   })} type="text"/>
+                        </div>
+
                     </div>
                     <div className="form-address two-columns column">
                         <div className="item">
@@ -154,7 +161,7 @@ function OrderForm({test}) {
                                     <input name="elsetextbox" ref={register({required: true})} type="text"/>
                                     {errors.elsetextbox && errors.elsetextbox.type == "required" && (
                                         <div className="error">
-                                            <p>This is required</p>
+                                            <p>Selecteer uw bezorgingsmethode!</p>
                                         </div>
                                     )}
 
@@ -170,7 +177,7 @@ function OrderForm({test}) {
                     <div className="form-comment one-column column">
                         <div className="item">
                             <label htmlFor="comment">Opmerking
-                                <textarea name="textarea" ref={register({required: true})}
+                                <textarea name="textarea" ref={register}
                                           id="comment"></textarea></label>
                         </div>
                     </div>
