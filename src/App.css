@@ -126,3 +126,10 @@ form > .separator {
     height: 2px;
     background-color: #efefef;
 }
+
+/* Fruits */
+.container-fruits {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}

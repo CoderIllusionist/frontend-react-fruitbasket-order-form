@@ -20,7 +20,6 @@ function OrderForm({test}) {
         console.log(data)
     }
 
-    const watchCheck = watch("check", false); // supply default value as second argument
     const radioButtons = watch("delivery", false);
     return (
         <>
@@ -30,12 +29,12 @@ function OrderForm({test}) {
                     <div className="separator"></div>
 
                     <h3>Uw gegevens</h3>
-                    {errors.firstname && errors.firstname.type == "required" && (
+                    {errors.firstname && errors.firstname.type === "required" && (
                         <div className="error">
-                            <p>Voornaam is verlpicht!</p>
+                            <p>Voornaam is verplicht!</p>
                         </div>
                     )}
-                    {errors.lastname && errors.lastname.type == "required" && (
+                    {errors.lastname && errors.lastname.type === "required" && (
                         <div className="error">
                             <p>Achternaam is verplicht!</p>
                         </div>
@@ -54,23 +53,23 @@ function OrderForm({test}) {
 
 
                     <div className="form-age one-column column">
-                        {errors.age && errors.age.type == "required" && (
+                        {errors.age && errors.age.type === "required" && (
                             <div className="error">
                                 <p>Leeftijd is verplicht!</p>
                             </div>
 
                         )}
-                        {errors.age && errors.age.type == "pattern" && (
+                        {errors.age && errors.age.type === "pattern" && (
                             <div className="error">
                                 <p>Alleen nummers zijn toegestaan</p>
                             </div>
                         )}
-                        {errors.age && errors.age.type == "min" && (
+                        {errors.age && errors.age.type === "min" && (
                             <div className="error">
                                 <p>U moet minstens 18 jaar oud zijn!</p>
                             </div>
                         )}
-                        {errors.age && errors.age.type == "maxLength" && (
+                        {errors.age && errors.age.type === "maxLength" && (
                             <div className="error">
                                 <p>Goh... U bent wel heel erg oud...</p>
                             </div>
@@ -83,7 +82,7 @@ function OrderForm({test}) {
                                            value: /^-?[0-9]\d*\.?\d*$/i,
                                            message: ""
                                        }
-                                   })} type="text"/>
+                                   })}/>
                         </div>
 
                     </div>
@@ -96,7 +95,7 @@ function OrderForm({test}) {
                                            value: /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i,
                                            message: ""
                                        }
-                                   })} type="text"/>
+                                   })}/>
                         </div>
                         <div className="item">
                             <label htmlFor="number">Huisnummer</label>
@@ -106,25 +105,25 @@ function OrderForm({test}) {
                                            value: /^-?[0-9]\d*\.?\d*$/i,
                                            message: ""
                                        }
-                                   })} type="text"/>
+                                   })}/>
                         </div>
                     </div>
-                    {errors.zipcode && errors.zipcode.type == "pattern" && (
+                    {errors.zipcode && errors.zipcode.type === "pattern" && (
                         <div className="error">
                             <p>Dit is geen geldige postcode!</p>
                         </div>
                     )}
-                    {errors.zipcode && errors.zipcode.type == "required" && (
+                    {errors.zipcode && errors.zipcode.type === "required" && (
                         <div className="error">
                             <p>Postcode is verplicht!</p>
                         </div>
                     )}
-                    {errors.home && errors.home.type == "pattern" && (
+                    {errors.home && errors.home.type === "pattern" && (
                         <div className="error">
                             <p>Huisnummer is alleen een nummer...</p>
                         </div>
                     )}
-                    {errors.home && errors.home.type == "required" && (
+                    {errors.home && errors.home.type === "required" && (
                         <div className="error">
                             <p>Huisnummer is verplicht!</p>
                         </div>
@@ -159,7 +158,7 @@ function OrderForm({test}) {
                                 <div className="item">
                                     <label htmlFor="elsetextbox">Anders, namelijk:</label>
                                     <input name="elsetextbox" ref={register({required: true})} type="text"/>
-                                    {errors.elsetextbox && errors.elsetextbox.type == "required" && (
+                                    {errors.elsetextbox && errors.elsetextbox.type === "required" && (
                                         <div className="error">
                                             <p>Selecteer uw bezorgingsmethode!</p>
                                         </div>
@@ -169,7 +168,7 @@ function OrderForm({test}) {
                             </div>
                         )}
                     </div>
-                    {errors.delivery && errors.delivery.type == "required" && (
+                    {errors.delivery && errors.delivery.type === "required" && (
                         <div className="error">
                             <p>Selecteer uw bezorgingsmethode!</p>
                         </div>
