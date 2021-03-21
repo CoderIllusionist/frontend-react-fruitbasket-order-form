@@ -128,14 +128,43 @@ form > .separator {
 }
 
 /* Fruits */
-.container-fruits .fruit-item {
+
+.container-fruits {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.container-fruits h1 {
+    text-align: center;
+    width: 50%;
+}
+
+.fruit-item {
     display: flex;
     justify-content: center;
     align-self: center;
-    flex-direction: row;
-
-
+    align-items: center;
+    width: 50%;
+    background-color: #efefef;
+    border-color: #efefef;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+.reset {
+    border-color: #efefef;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+
 .container-fruits .fruit-item button {
     height: 34px;
     width: 50px;
@@ -146,6 +175,7 @@ form > .separator {
     text-align: center;
     align-self: center;
     margin: 10px 10px;
+    cursor: pointer;
 
 }
 .container-fruits p {
@@ -155,25 +185,8 @@ form > .separator {
     font-size: 26px;
     border:1px solid #ddd;
     border-radius:4px;
-    display: inline-block;
 }
 
 .container-fruits .fruit-item h4 {
-    align-self: center;
     height: 30px;
-    position: absolute;
-    padding-bottom: 7vw;
-
-}
-.container-fruits .reset {
-    display: flex;
-    background:#f2f2f2;
-    border-radius:4px;
-    padding:8px 5px 8px 5px;
-    border:1px solid #ddd;
-    text-align: center;
-    align-self: center;
-    margin: auto;
-    width: 20vw;
-
 }
