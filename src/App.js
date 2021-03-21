@@ -67,26 +67,37 @@ function App() {
 
                 <div className="fruit-item">
                     <h4>🍓Aardbeien</h4>
-                    <button onClick={addCounterStrawBerry} type="button">+</button>
+                    <div className="button-spacing">
+                        <button onClick={addCounterStrawBerry} type="button">+</button>
+                    </div>
                     <p>{countStrawBerry}</p>
                     <button onClick={minCounterStrawBerry} type="button">-</button>
                 </div>
                 <div className="fruit-item">
                     <h4>🍌Bananen</h4>
-                    <button onClick={addCounterBanana} type="button">+</button>
+                    <div className="button-spacing">
+
+                        <button onClick={addCounterBanana} type="button">+</button>
+                    </div>
                     <p>{countBanana}</p>
                     <button onClick={minCounterBanana} type="button">-</button>
 
                 </div>
                 <div className="fruit-item">
                     <h4>🍏Appels</h4>
-                    <button onClick={addCounterApple} type="button">+</button>
+                    <div className="button-spacing">
+
+                        <button onClick={addCounterApple} type="button">+</button>
+                    </div>
                     <p>{countApple}</p>
                     <button onClick={minCounterApple} type="button">-</button>
                 </div>
                 <div className="fruit-item">
                     <h4>🥝Kiwi's</h4>
-                    <button onClick={addCounterKiwi} type="button">+</button>
+                    <div className="button-spacing">
+
+                        <button onClick={addCounterKiwi} type="button">+</button>
+                    </div>
                     <p>{countKiwi}</p>
                     <button onClick={minCounterKiwi} type="button">-</button>
                 </div>

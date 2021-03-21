@@ -163,6 +163,7 @@ form > .separator {
     margin-bottom: 20px;
     cursor: pointer;
     width: 50%;
+    outline: none;
 }
 
 .container-fruits .fruit-item button {
@@ -176,7 +177,8 @@ form > .separator {
     align-self: center;
     margin: 10px 10px;
     cursor: pointer;
-
+    box-shadow: 0px 0px 5px -2px #000000;
+    outline: none;
 }
 .container-fruits p {
     height:34px;
@@ -185,8 +187,4 @@ form > .separator {
     font-size: 26px;
     border:1px solid #ddd;
     border-radius:4px;
-}
-
-.container-fruits .fruit-item h4 {
-    height: 30px;
 }
