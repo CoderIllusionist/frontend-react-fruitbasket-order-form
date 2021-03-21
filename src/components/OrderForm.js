@@ -18,7 +18,7 @@ function OrderForm({test}) {
 
     const onSubmit = data => {
         console.log(data)
-    }
+}
 
     const radioButtons = watch("delivery", false);
     return (
@@ -181,7 +181,7 @@ function OrderForm({test}) {
                         </div>
                     </div>
                     <div className="one-column">
-                        <button className="button" type="submit" ref={register}>Verzend</button>
+                        <button className="button" type="submit">Verzend</button>
                     </div>
                 </form>
             </div>

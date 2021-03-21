@@ -83,7 +83,7 @@ function App() {
                     <p>{countKiwi}</p>
                     <button onClick={minCounterKiwi}  type="button">-</button>
                 </div>
-                <button onClick={resetAll}>Reset</button>
+                <button className="reset" onClick={resetAll}>Reset</button>
             </div>
 
             <div>
